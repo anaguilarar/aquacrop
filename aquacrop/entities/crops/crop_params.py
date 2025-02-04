@@ -2581,7 +2581,7 @@ crop_params={'Barley': {'Aer': 15.0,
   'p_up2': 0.50,
   'p_up3': 0.50,
   'p_up4': 0.90},
-  'Cassava': {'Aer': 5.0, ## Vol (%) below saturation at which stress begins to occur due to deficient aeration #no change
+  'Banana': {'Aer': 5.0, ## Vol (%) below saturation at which stress begins to occur due to deficient aeration #no change
   'CCx': 0.90 , ## thesis Maximum canopy cover in fraction soil cover (-)
   'CDC': -9.0, ## Thesis not cosidered, (default value) Canopy decline coefficient: Decrease CC (% per day # not 
   'CDC_CD': 0.1275, ## deafualt
