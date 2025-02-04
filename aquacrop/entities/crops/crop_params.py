@@ -2581,6 +2581,77 @@ crop_params={'Barley': {'Aer': 15.0,
   'p_up2': 0.50,
   'p_up3': 0.50,
   'p_up4': 0.90},
-
+  'Cassava': {'Aer': 5.0, ## Vol (%) below saturation at which stress begins to occur due to deficient aeration #no change
+  'CCx': 0.90 , ## thesis Maximum canopy cover in fraction soil cover (-)
+  'CDC': -9.0, ## Thesis not cosidered, (default value) Canopy decline coefficient: Decrease CC (% per day # not 
+  'CDC_CD': 0.1275, ## deafualt
+  'CGC':- 9., # Canopy growth coefficient: Increase in CC (% per day) 
+  'CGC_CD': 0.027, # Canopy growth coefficient (fraction per GDD)
+  'CalendarType': 1, # Calendar Type (1 = Calendar days, 2 = Growing degree days)
+  'CropType': 3, #Crop Type (1 = Leafy vegetable, 2 = Root/tuber, 3 = Fruit/grain)
+  'Determinant': 0., # Crop Determinacy (0 = Indeterminant, 1 = Determinant) ## thesis page 116
+  'ETadj': 1.0, # Adjustment to water stress thresholds depending on daily ET0 (0 not chang
+  'Emergence': -9.0, # Growing degree/Calendar days from sowing to emergence/transplant recovery
+  'EmergenceCD': -9.0, 
+  'Flowering': -9.0, #Duration of flowering in growing degree/calendar days (-999 for non-fruit/grain crops)
+  'FloweringCD': 84, # Length of the flowering stage (days) # thesis
+  'GDD_lo': 0,
+  'GDD_up': 11.1,
+  'GDDmethod': 3,
+  'HI0': 0.32, ##Reference harvest index (HI0)  
+  'HIstart': -9.0, #Growing degree/Calendar days from sowing to start of yield formation
+  'HIstartCD': 223., #Growing Calendar days from sowing to start of yield formation # thesis
+  'Kcb': 1.1, # Crop coefficient when canopy growth is complete but prior to senescence # thesis
+  'Maturity': -9.0, # Growing degree/Calendar days from sowing to maturity # From regrowth to maturity (days) # thesis
+  'MaturityCD': 397, # observed
+  'MaxRooting': -9.0, # Growing degree/Calendar days from sowing to maximum rooting
+  'MaxRootingCD': 180, # From regrowth to maximum rooting depth (days) # thesis
+  'Name': 'Banana',
+  'PlantMethod':0, # Planting method (0 = Transplanted, 1 = Sown)
+  'PlantPop': 1666.0, # 	Number of plants per hectare # #lant density in the field (plants ha-1) # thesis
+  'PolColdStress': 0, # 	Pollination affected by cold stress (0 = No, 1 = Yes)
+  'PolHeatStress': 0,
+  'SeedSize': 1020, # Soil surface area (cm2) covered by an individual seedling at 90% emergence Soil surface covered by an individual seedling at 90 % emergence (cm2) # thesis
+  'Senescence': -9.0, # Growing degree/Calendar days from sowing to senescence
+  'SenescenceCD': 397.0, # From regrowth to start senescence (days) 
+  'SwitchGDD': 1, # 	Convert calendar to GDD mode if inputs are given in calendar days (0 = No; 1 = Yes) # assumed
+  'SxBotQ': 0.012, # Maximum root water extraction at the bottom of the root zone (m3/ m3/ day) #literature 
+  'SxTopQ': 0.048, #	Maximum root water extraction at top of the root zone (m3/ m3/ day) #literature 
+  'Tbase': 14, # Base temperature (°C) below which crop development no longer progresses (°C) # thesis literature
+  'Tmax_lo': 45.0, # Maximum air temperature (degC) at which pollination completely fails
+  'Tmax_up': 40.0,
+  'Tmin_lo': -9,
+  'Tmin_up': -9,
+  'TrColdStress': 0, #Transpiration affected by cold temperature stress (0 = No, 1 = Yes) ## asssumed
+  'Tupp': 38.0, # Upper temperature (degC) above which crop development no longer increases # pper temperature (°C) above which crop development no longer progresses (°C) thesis literature
+  'WP': 15.0, # Water productivity normalized for ET0 and C02 (g/m2) #Water productivity normalized for 𝐸𝑇0 and CO2 (WP*) (g m-2) # Thesis Calibrated
+  'WPy': 100.0, # Adjustment of water productivity in yield formation stage # default
+  'YldForm': -9.0, # Deafault
+  'YldFormCD': 50.0, # Deafault
+  'YldWC': 25, # Default
+  'Zmax': 0.6, #	Maximum rooting depth (m) #aximum effective rooting depth (m)  Observed
+  'Zmin': 0.1, # Minimum effective rooting depth (m) # thesis observed
+  'a_HI': 10.0, # Coefficient describing positive impact on harvest index of restricted vegetative growth during yield formation # default
+  'b_HI': 8.0, # Coefficient describing negative impact on harvest index of stomatal closure during yield formation # Coefficient describing negative impact on HI of stomatal closure during yield formation (flower initiation to harvest) (-) small effect # thesis calibrated
+  'dHI0': 10.0, # Maximum allowable increase of harvest index above reference value # defaiult
+  'dHI_pre': 5.0, # default
+  'exc': 50.0, # default
+  'fage': 0.15, # Decline of crop coefficient due to ageing (%/day
+  'fshape_r': 15., # Shape factor describing root expansion Shape factor describing root zone expansion (-) Thesis calibrated
+  'fshape_w1': 3.0, # Shape factor describing water stress effects on canopy expansion # hape factor for water stress coefficient for canopy expansion (0.0 = straight line Thesis
+  'fshape_w2': 3.0, # Shape factor describing water stress effects on stomatal control # Thesis calibrated
+  'fshape_w3': 3.0, # Shape factor describing water stress effects on canopy senescence # Thesis calibrated
+  'fshape_w4': 1, # Shape factor describing water stress effects on pollination # Default
+  'fsink': 0.5, # Crop performance under elevated atmospheric CO2 concentration (%/100) #  Crop performance under elevated atmospheric CO2 conditions Thesis Default
+  'p_lo1': 0.8, # Lower soil water depletion threshold for water stress effects on canopy expansion # Soil water depletion factor for canopy expansion - Lower threshold # thesis
+  'p_lo2': 1, # Lower soil water depletion threshold for water stress effects on canopy stomatal control # Default
+  'p_lo3': 1, # Lower soil water depletion threshold for water stress effects on canopy senescence
+  'p_lo4': 1, # Lower soil water depletion threshold for water stress effects on canopy pollination # Default
+  'p_up1': 0.3, # Upper soil water depletion threshold for water stress effects on affect canopy expansion # oil water depletion factor for canopy expansion - Upper threshold # Thesis Calibrated
+  'p_up2': 0.35, # Upper soil water depletion threshold for water stress effects on canopy stomatal control # oil water depletion fraction for stomatal control - Upper threshold # Thesis Calibrated
+  'p_up3': 0.98, # Upper soil water depletion threshold for water stress effects on canopy senescence # oil water depletion factor for canopy senescence - Upper threshold # Thesis Calibrated
+  'p_up4': 0.98 #Upper soil water depletion threshold for water stress effects on canopy pollination # Soil water depletion factor for pollination (p - pol) - Upper threshold (m3 m- Thesis Calibrated
+  }
 
   }
+
